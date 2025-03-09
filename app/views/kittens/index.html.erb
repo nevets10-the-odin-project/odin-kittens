@@ -2,8 +2,12 @@
 <% @kittens.each do |kitten| %>
 <div>
     <h3><%= kitten.name %></h3>
-    <p>Age: <%= kitten.age %></p>
-    <p>Cuteness: <%= kitten.cuteness %></p>
-    <p>Softness: <%= kitten.softness %></p>
+    <p>
+        Age: <%= kitten.age %>
+        <br>
+        Cuteness: <%= kitten.cuteness %>
+        <br>
+        Softness: <%= kitten.softness %>
+    </p>
 </div>
 <% end %>
