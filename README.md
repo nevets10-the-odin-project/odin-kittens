@@ -8,3 +8,4 @@ This is a fast and straightforward project where you’ll set up a Rails app to 
 
 ---
 
+# odin-kittens
