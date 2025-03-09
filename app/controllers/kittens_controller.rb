@@ -32,4 +32,10 @@ class KittensController < ApplicationController
   def destroy
     @kitten = Kitten.find(params[:id])
   end
+
+  private
+
+  def kitten_params
+    params.expect(kitten: %i[name age cuteness softness])
+  end
 end
