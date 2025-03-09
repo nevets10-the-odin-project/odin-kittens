@@ -8,4 +8,5 @@
         Softness: <%= kitten.softness %>
     </p>
     <%= link_to 'Edit kitten', edit_kitten_path(kitten.id) %>
+    <%= button_to 'Delete kitten', kitten, method: :delete %>
 </div>
