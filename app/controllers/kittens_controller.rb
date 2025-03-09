@@ -13,6 +13,7 @@ class KittensController < ApplicationController
 
   def create
     @kitten = Kitten.new(kitten_params)
+    flash[:notice] = 'Kitten created'
 
     if @kitten.save
       redirect_to @kitten
@@ -27,6 +28,7 @@ class KittensController < ApplicationController
 
   def update
     @kitten = Kitten.find(params[:id])
+    flash[:notice] = 'Kitten updated'
 
     if @kitten.update(kitten_params)
       redirect_to @kitten
@@ -37,8 +39,8 @@ class KittensController < ApplicationController
 
   def destroy
     @kitten = Kitten.find(params[:id])
-
     @kitten.destroy!
+    flash[:notice] = 'Kitten deleted'
 
     redirect_to root_path
   end
